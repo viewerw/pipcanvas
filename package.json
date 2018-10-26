@@ -1,0 +1,26 @@
+{
+    "name": "pipcanvas",
+    "version": "1.0.0",
+    "description": "fast init a picture-in-picture animation page",
+    "main": "lib/index.umd.js",
+    "module": "lib/index.es.js",
+    "scripts": {
+        "start": "npm run dev",
+        "dev": "rollup src/index.js --file lib/index.umd.js --format umd --name 'PipCanvas' --watch",
+        "build": "npm run build-umd && npm run build-es && npm run build-common",
+        "build-umd": "rollup src/index.js --file lib/index.umd.js --format umd --name 'PipCanvas'",
+        "build-es": "rollup src/index.js --file lib/index.es.js --format es ",
+        "build-common": "rollup src/index.js --file lib/index.common.js --format cjs ",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "pip",
+        "canvas"
+    ],
+    "author": "viewerw",
+    "license": "ISC",
+    "dependencies": {},
+    "devDependencies": {
+        "rollup": "^0.66.6"
+    }
+}
